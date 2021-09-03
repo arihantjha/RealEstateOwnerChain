@@ -39,7 +39,7 @@ class OwnerChain:
         check_proof = False
         while check_proof is False:
             hash_operation = hashlib.sha256(str(abs(new_proof**2 - previous_proof**2)).encode()).hexdigest()
-            if hash_operation[:4] == '000':
+            if hash_operation[:] == '000':
                 check_proof = True
             else:
                 new_proof += 1
@@ -66,7 +66,7 @@ class OwnerChain:
             previous_proof = previous_OwnerInfo['proof']
             proof = OwnerInfo['proof']
             hash_operation = hashlib.sha256(str(proof**2 - previous_proof**2).encode()).hexdigest()
-            if hash_operation[:4] != '0000':
+            if hash_operation[:3] != '0000':
                 return False
             previous_OwnerInfo = OwnerInfo
             OwnerInfo_ownerNumber += 1
