@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "datetime": "^0.0.3",
+    "flask": "^0.2.10",
+    "hashlib": "^1.0.1",
+    "json": "^11.0.0",
+    "jsonify": "^0.0.0"
+  }
+}
